@@ -2,27 +2,31 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>클립보드 복사</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>복사 페이지</title>
   <style>
-    body { font-family: sans-serif; padding: 20px; }
-    #text { padding: 10px; background: #f0f0f0; display: inline-block; }
-    button { margin-left: 10px; padding: 5px 10px; }
-  </style>
-</head>
-<body>
-  <h2>클립보드로 복사</h2>
-  <div>
-    <span id="text">복사할 문구입니다!</span>
-    <button onclick="copyText()">복사</button>
-  </div>
-
-  <script>
-    function copyText() {
-      const text = document.getElementById("text").innerText;
-      navigator.clipboard.writeText(text).then(() => {
-        alert("복사되었습니다!");
-      });
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      margin: 0;
+      background-color: #f9f9f9;
+      text-align: center;
     }
-  </script>
-</body>
-</html>
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    #text {
+      display: inline-block;
+      padding: 1rem 1.5rem;
+      font-size: 1.5rem;
+      background-color: #ffffff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      font-size
