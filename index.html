@@ -3,29 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>복사 페이지</title>
+  <title>클립보드 복사</title>
   <style>
     body {
       font-family: sans-serif;
-      padding: 2rem;
+      padding: 20px;
       margin: 0;
-      background-color: #f9f9f9;
       text-align: center;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
+      background-color: #f0f0f0;
     }
 
     #text {
       display: inline-block;
       padding: 1rem 1.5rem;
       font-size: 1.5rem;
-      background-color: #ffffff;
+      background: #ffffff;
       border: 2px solid #ccc;
       border-radius: 10px;
-      margin-bottom: 1.5rem;
+      margin: 1rem auto;
     }
 
     button {
@@ -44,12 +39,11 @@
   </style>
 </head>
 <body>
-  <h2>복사할 문구입니다</h2>
+  <h2 style="font-size: 2rem;">복사할 문구입니다</h2>
   <div>
-    <div id="text">이 문구를 복사해보세요!</div>
+    <span id="text">복사할 문구입니다!</span>
   </div>
-  <br>
-  <button onclick="copyText()">복사하기</button>
+  <button onclick="copyText()">복사</button>
 
   <script>
     function copyText() {
