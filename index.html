@@ -29,4 +29,35 @@
     }
 
     button {
-      font-size
+      font-size: 1.25rem;
+      padding: 1rem 2rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>복사할 문구입니다</h2>
+  <div>
+    <div id="text">이 문구를 복사해보세요!</div>
+  </div>
+  <br>
+  <button onclick="copyText()">복사하기</button>
+
+  <script>
+    function copyText() {
+      const text = document.getElementById("text").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("복사되었습니다!");
+      });
+    }
+  </script>
+</body>
+</html>
